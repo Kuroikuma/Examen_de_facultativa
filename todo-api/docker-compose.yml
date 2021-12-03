@@ -1,17 +1,17 @@
 version: "3.3"
 services:
-  api-balancerExamen:
+  api-balancerexamen:
     build: ./../api-loadbalancer/
     ports:
       - "2000:80"
     depends_on:
-      - apiExamen1
-      - apiExamen2
-      - apiExamen3
-      - apiExamen4
-      - apiExamen5
-      - apiExamen6
-  apiExamen1:
+      - api-examen1
+      - api-examen2
+      - api-examen3
+      - api-examen4
+      - api-examen5
+      - api-examen6
+  api-examen1:
     build: ./
     ports:
       - "2001:2000"
@@ -22,12 +22,12 @@ services:
       DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
       DATABASE_OPTION_DATABASE: "TodosDB"
       API_PORT: "2000"
-      SERVER_TAG: "apiExamen1"
+      SERVER_TAG: "api-examen1"
     depends_on:
       - db
     links:
       - "db"
-  apiExamen2:
+  api-examen2:
     build: ./
     ports:
       - "2002:2000"
@@ -38,12 +38,12 @@ services:
       DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
       DATABASE_OPTION_DATABASE: "TodosDB"
       API_PORT: "9000"
-      SERVER_TAG: "apiExamen2"
+      SERVER_TAG: "api-examen2"
     depends_on:
       - db
     links:
       - "db"
-  apiExamen3:
+  api-examen3:
     build: ./
     ports:
       - "2003:2000"
@@ -54,12 +54,12 @@ services:
       DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
       DATABASE_OPTION_DATABASE: "TodosDB"
       API_PORT: "2000"
-      SERVER_TAG: "apiExamen3"
+      SERVER_TAG: "api-examen3"
     depends_on:
       - db
     links:
       - "db"
-  apiExamen4:
+  api-examen4:
     build: ./
     ports:
       - "2004:2000"
@@ -70,12 +70,12 @@ services:
       DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
       DATABASE_OPTION_DATABASE: "TodosDB"
       API_PORT: "2000"
-      SERVER_TAG: "apiExamen4"
+      SERVER_TAG: "api-examen4"
     depends_on:
       - db
     links:
       - "db"
-  apiExamen5:
+  api-examen5:
     build: ./
     ports:
       - "2005:2000"
@@ -86,12 +86,12 @@ services:
       DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
       DATABASE_OPTION_DATABASE: "TodosDB"
       API_PORT: "2000"
-      SERVER_TAG: "apiExamen5"
+      SERVER_TAG: "api-examen5"
     depends_on:
       - db
     links:
       - "db"
-  apiExamen6:
+  api-examen6:
     build: ./
     ports:
       - "2006:2000"
@@ -102,7 +102,7 @@ services:
       DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
       DATABASE_OPTION_DATABASE: "TodosDB"
       API_PORT: "2000"
-      SERVER_TAG: "apiExamen6"
+      SERVER_TAG: "api-examen6"
     depends_on:
       - db
     links:
