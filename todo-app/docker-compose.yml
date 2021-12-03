@@ -1,0 +1,87 @@
+version: "3.3"
+services:
+  react-web-balancer:
+    build: ./../app-loadbalancer/
+    ports:
+      - "3000:80"
+    depends_on:
+      - react-web1
+      - react-web2
+      - react-web3
+      - react-web4
+      - react-web5
+      - react-web6
+      - react-web7
+      - react-web8
+      - react-web9
+      - react-web10
+  react-web1:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3001:80"
+  react-web2:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3002:80"
+  react-web3:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3003:80"
+  react-web4:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3004:80"
+  react-web5:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3005:80"
+  react-web6:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3006:80"
+  react-web7:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3007:80"
+  react-web8:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3008:80"
+  react-web9:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3009:80"
+  react-web10:
+    build:
+      context: ./
+      args:
+        - URL=urlBackend
+    ports:
+      - "3010:80"
